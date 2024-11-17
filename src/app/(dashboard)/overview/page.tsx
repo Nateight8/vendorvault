@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div className="w-full  h-full border flex items-center justify-center">
-      overview
+    <div className="h-screen  w-full flex items-center justify-center">
+      Overvew
     </div>
   );
 }

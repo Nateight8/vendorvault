@@ -17,6 +17,8 @@ import {
   IconHelpSquareRounded,
   IconLayoutDashboard,
   IconListDetails,
+  IconLogout2,
+  IconPackage,
   IconSettings,
   IconShoppingCart,
   IconUserDollar,
@@ -39,7 +41,7 @@ const mainlinks = [
   {
     title: "Orders",
     url: "/orders",
-    icon: IconListDetails,
+    icon: IconPackage,
   },
   {
     title: "Payments",
@@ -83,7 +85,7 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar>
+    <Sidebar className="border-none">
       <SidebarContent>
         <div className="h-16"></div>
         <SidebarGroup>
@@ -123,6 +125,16 @@ export function AppSidebar() {
               </SidebarMenuItem>
             );
           })}
+        </SidebarMenu>
+        <SidebarMenu className="px-4 mt-6">
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <button>
+                <IconLogout2 />
+                <span>Log out</span>
+              </button>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
